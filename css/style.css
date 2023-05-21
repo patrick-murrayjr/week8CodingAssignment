@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+/* GLOBALS */
+:root {
+  --primary: #333;
+  --secondary: #575757;
+  --text-color: #fff;
+  --selected: darkorange;
+  --shadow: #868686;
+  --highlight: #c9c9c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--primary);
+  color: var(--text-color);
+}
+
+.container {
+  margin: 10px;
+}
+
+/* ////////////////////////////////////// */
+/* HEADER */
+header {
+  margin: 10px 10px 30px;
+  /* padding: 10px; */
+}
+
+#branding {
+  height: 115px;
+  margin-left: 25px;
+}
+header .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.nav-bar h1 {
+  justify-self: center;
+  margin-top: 15px;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  justify-content: bottom;
+}
+
+.nav-menu li .selected {
+  color: var(--selected);
+}
+
+.nav-menu li a {
+  color: var(--text-color);
+  padding: 0 5px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.nav-menu li a:hover {
+  color: var(--shadow);
+}
+
+img.logo {
+  width: 200px;
+}
+
+/* ////////////////////////////////////// */
+/* MAIN */
+main .container {
+  display: grid;
+  margin: 10px 35px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+main .container .hero {
+  grid-column: 1/3;
+  border-radius: 15px;
+  border: 3px solid var(--text-color);
+  box-shadow: 5px 5px var(--shadow);
+  padding: 10px;
+  background-color: var(--secondary);
+}
+main .beverage-menu {
+  grid-column: 1/3;
+}
+
+table {
+  margin: 10px;
+}
+
+th {
+  background-color: var(--shadow);
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+td {
+  background-color: var(--primary);
+}
+th,
+td {
+  padding: 0 8px;
+  /* padding-right: 8px;
+  padding-left: 5px; */
+  border: 3px solid var(--highlight);
+  border-radius: 5px;
+}
+
+.hero h1 {
+  justify-content: start;
+  text-align: center;
+  margin: 15px;
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+main h2 {
+  font-size: 1.8rem;
+}
+
+main .container .para1,
+.para2,
+.para3,
+.para4,
+.beverage-menu,
+.about-us,
+.house-rules,
+.things-to-do {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 5px 15px;
+  background-color: var(--secondary);
+  border: 3px solid var(--highlight);
+  border-radius: 15px;
+  box-shadow: 5px 5px var(--shadow);
+}
+
+main .container .para1 img,
+.para2 img,
+.para3 img,
+.para4 img,
+.things-to-do img {
+  width: 400px;
+  background-color: var(--primary);
+  margin: 25px 5px;
+  padding: 10px;
+  border: 2px solid var(--highlight);
+  border-radius: 10%;
+}
+.visit-form,
+.thank-you {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px 15px;
+  background-color: var(--secondary);
+  border: 3px solid var(--highlight);
+  border-radius: 15px;
+  box-shadow: 5px 5px var(--shadow);
+}
+.thank-you h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.thank-you h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.thank-you p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+.things-to-do {
+  grid-column: 1/3;
+  display: inline;
+}
+.things-to-do li {
+  margin: 3px 10px;
+}
+.things-to-do p {
+  color: var(--highlight);
+  font-style: italic;
+  text-align: center;
+}
+
+main .container .hero img {
+  width: 100%;
+  justify-items: center;
+  object-fit: cover;
+  background-color: var(--primary);
+  margin: 25px 5px 5px 0;
+  padding: 10px;
+  border: 2px solid var(--highlight);
+  border-radius: 30px;
+}
+main .container .drinks {
+  width: 700px;
+  background-color: var(--primary);
+  margin: 55px 5px 5px;
+  padding: 10px;
+  border: 2px solid var(--highlight);
+  border-radius: 25px;
+}
+.house-rules li {
+  font-size: larger;
+}
+
+.about-us {
+  padding: 25px;
+  display: inline;
+}
+
+.beverage-menu h2,
+.beverage-menu p {
+  text-align: center;
+}
+
+.text-wrapper {
+  margin: 20px;
+}
+.thank-you {
+  grid-column: 1/2;
+}
+
+#fname,
+#lname,
+#email,
+#message {
+  width: 95%;
+}
+
+#submit {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 5px 15px;
+  width: 95%;
+  border: 2px solid var(--highlight);
+}
+/* ////////////////////////////////////// */
+/* FOOTER */
+footer {
+  padding: 15px;
+  justify-content: center;
+  display: flex;
+}
+footer p {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+footer a {
+  color: var(--selected);
+}
